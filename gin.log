@@ -1,0 +1,2 @@
+[GIN] 2018/12/18 - 22:51:29 | 200 |     14.0062ms |             ::1 | GET      /cart/getProducts
+[GIN] 2018/12/18 - 22:51:36 | 200 |     12.9919ms |             ::1 | GET      /cart/getProducts

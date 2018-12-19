@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    restart: always
+    links:
+      - db:mysql
+    ports:
+      - 3001:3001
+    depends_on:
+      - db
+
+  db:
+    image: sibeeni/mysqldb:latest
+    command: --lower_case_table_names=1 
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=testdb
+      - MYSQL_USER=testuser
+      - MYSQL_PASSWORD=123
